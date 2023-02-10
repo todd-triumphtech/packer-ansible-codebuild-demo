@@ -15,10 +15,10 @@ phases:
        - echo "Updating the repository"
        - apt-get update -y
        - echo "Packer init"
-       - packer init -upgrade packer.pkr.hcl
+       - ./packer init -upgrade packer.pkr.hcl
        - echo "Validating the Packer template"
-       - packer validate packer.pkr.hcl
+       - ./packer validate packer.pkr.hcl
    build:
      commands:
         - echo "Building the Packer template"
-        - packer build packer.pkr.hcl
+        - ./packer build packer.pkr.hcl
